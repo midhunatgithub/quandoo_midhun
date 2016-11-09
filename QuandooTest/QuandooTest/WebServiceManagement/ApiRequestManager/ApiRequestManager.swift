@@ -13,13 +13,18 @@ class ApiRequestManager: NSObject {
     private override init() {
     }
     
+    // MARK: - webservice call for userList .
     func fetchUsers() -> ApiCommonResult {
-         let result = (["":""] <* "users") ... "Fetching..."
-         return result
+        // operator '<*' is used call a get method. result = params <* service_name
+        // operator '...' is used to showing activity indicator during the service call.
+        let result = (["":""] <* "users") ... "Fetching..."
+        return result
     }
-    
+    // MARK: - webservice call for postList .
     func fetchUserPostsWithUserId(userId:String) -> ApiCommonResult {
-          let result = (["userId":userId] <* "posts") ... "Fetching..."
-          return result
+        // operator '<*' is used call a get method. result = params <* service_name
+        // operator '...' is used to showing activity indicator during the service call.
+        let result = (["userId":userId] <* "posts") ... "Fetching..."
+        return result
     }
 }

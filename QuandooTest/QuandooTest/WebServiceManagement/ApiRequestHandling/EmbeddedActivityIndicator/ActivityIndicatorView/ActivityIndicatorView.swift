@@ -13,7 +13,6 @@ class ActivityIndicatorView: UIView {
     private var activityIndicatorView:NVActivityIndicatorView!
     private lazy var titleLabel = UILabel()
     
-    
     public class var sharedInstance: ActivityIndicatorView {
         struct Singleton {
             static let instance = ActivityIndicatorView(frame: CGRect.zero)

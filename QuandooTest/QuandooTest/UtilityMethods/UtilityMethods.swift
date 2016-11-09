@@ -19,7 +19,6 @@ func dispatchOnMainQueue(closure: @escaping () -> Void) {
     }
     
 }
-
 func dispatchBackgroundQueue(closure: @escaping () -> Void) {
     DispatchQueue.global().async {
         closure()

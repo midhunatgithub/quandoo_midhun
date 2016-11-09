@@ -10,5 +10,4 @@ import UIKit
 
 struct ApiConstants {
     static let baseUrl = NSURL(string: "http://jsonplaceholder.typicode.com/")
-
 }

@@ -29,12 +29,12 @@ class UserPostListViewController: UIViewController, UITableViewDataSource, UITab
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // MARK: - Webservice calling and UI updation.
     func populateUIWithPosts(){
-        
+        // user id is nill then return.
         guard let id = userId else {
             return
         }
-        
         let userIdString = "\(id)"
         let result = ApiRequestManager.apiRequest.fetchUserPostsWithUserId(userId: userIdString)
         result.onSuccess { (response) in
@@ -49,8 +49,8 @@ class UserPostListViewController: UIViewController, UITableViewDataSource, UITab
             }catch {
                 self.showAlert(titel: "Error!", messege: "Unexpected error during the parsing.")
             }
-        }.onFailure { (error) in
-           self.showAlert(titel: "Error!", messege: error.localizedDescription)
+            }.onFailure { (error) in
+                self.showAlert(titel: "Error!", messege: error.localizedDescription)
         }
     }
     func showAlert(titel:String,messege:String){
@@ -59,29 +59,23 @@ class UserPostListViewController: UIViewController, UITableViewDataSource, UITab
         alertController.addAction(defaultAction)
         present(alertController, animated: true, completion: nil)
     }
-    func numberOfSections(in tableView: UITableView) -> Int
-    {
+    func numberOfSections(in tableView: UITableView) -> Int{
         var numOfSections: Int = 0
-        if posts.count > 0
-        {
-          
+        if posts.count > 0{
             numOfSections                = 1
             postListTableView.backgroundView = nil
         }
-        else
-        {
+        else{
             let noDataLabel: UILabel     = UILabel(frame: CGRect(x:0, y:0, width:postListTableView.bounds.size.width, height:postListTableView.bounds.size.height))
             noDataLabel.text             = "No data available, Please select a user"
             noDataLabel.textColor        = UIColor.black
             noDataLabel.textAlignment    = .center
             postListTableView.backgroundView = noDataLabel
-
         }
         return numOfSections
     }
-
+    // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return posts.count
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -94,5 +88,5 @@ class UserPostListViewController: UIViewController, UITableViewDataSource, UITab
         cell.messegeLabel.text = post.body
         return cell
     }
-
+    
 }

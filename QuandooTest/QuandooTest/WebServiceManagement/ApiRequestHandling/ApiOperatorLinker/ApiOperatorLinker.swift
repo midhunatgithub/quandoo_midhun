@@ -8,7 +8,7 @@
 
 import UIKit
 import AFNetworking
-
+// creating a session manager (AFHTTPSessionManager)
 class ApiOperatorLinker {
     static let linker =  ApiOperatorLinker()
     var apiSessionManager =  AFHTTPSessionManager(baseURL: ApiConstants.baseUrl as URL?)
@@ -26,6 +26,7 @@ class ApiOperatorLinker {
             ActivityIndicatorView.hideFoodieActivity()
         }
     }
+    //MARK: - Response log methods.
     func printForDebug(any:Any)  {
         #if DEBUG
             print(any)
