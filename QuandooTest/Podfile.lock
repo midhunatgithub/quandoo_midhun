@@ -1,0 +1,32 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - JSONJoy-Swift (2.0.1)
+  - NVActivityIndicatorView (3.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - JSONJoy-Swift (~> 2.0.1)
+  - NVActivityIndicatorView
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  JSONJoy-Swift: 9e3d2c20cadbfdd8cd56f1f4d5733d80ce2ffa09
+  NVActivityIndicatorView: 81953b5e65093ba79edf4fe7268e002039ca5268
+
+PODFILE CHECKSUM: b2072d9b739316b92feac6b2ab6db4d5ce73d7b6
+
+COCOAPODS: 1.0.1

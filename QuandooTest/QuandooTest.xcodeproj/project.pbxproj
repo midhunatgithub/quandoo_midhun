@@ -1,0 +1,774 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		630C0A151DCF5045009A4887 /* ApiRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A141DCF5045009A4887 /* ApiRequestManager.swift */; };
+		630C0A171DCF50F9009A4887 /* ApiCommonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A161DCF50F9009A4887 /* ApiCommonResult.swift */; };
+		630C0A191DCF523C009A4887 /* ApiOperatorLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A181DCF523C009A4887 /* ApiOperatorLinker.swift */; };
+		630C0A1C1DCF54AB009A4887 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A1B1DCF54AB009A4887 /* ApiConstants.swift */; };
+		630C0A1E1DCF577F009A4887 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A1D1DCF577F009A4887 /* ActivityIndicatorView.swift */; };
+		630C0A211DCF58C3009A4887 /* UtilityMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A201DCF58C3009A4887 /* UtilityMethods.swift */; };
+		630C0A231DCF5AF0009A4887 /* PostRequestOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A221DCF5AF0009A4887 /* PostRequestOperator.swift */; };
+		630C0A251DCF5B04009A4887 /* GetRequestOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A241DCF5B04009A4887 /* GetRequestOperator.swift */; };
+		630C0A291DCF5B32009A4887 /* ActivityIndicatorOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A281DCF5B32009A4887 /* ActivityIndicatorOperator.swift */; };
+		630C0A2E1DD1DB50009A4887 /* UserListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A2D1DD1DB50009A4887 /* UserListTableViewController.swift */; };
+		630C0A301DD1DB9E009A4887 /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A2F1DD1DB9E009A4887 /* UserListTableViewCell.swift */; };
+		630C0A351DD1DFB3009A4887 /* UserPostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A341DD1DFB3009A4887 /* UserPostListViewController.swift */; };
+		630C0A371DD1DFD9009A4887 /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A361DD1DFD9009A4887 /* UserPostCell.swift */; };
+		630C0A3A1DD1E292009A4887 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A391DD1E292009A4887 /* UserModel.swift */; };
+		630C0A3D1DD1EBB0009A4887 /* UserPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A3C1DD1EBB0009A4887 /* UserPostModel.swift */; };
+		630C0A401DD2327A009A4887 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C0A3F1DD2327A009A4887 /* UserInfoViewController.swift */; };
+		63C14BFE1DCCB45F009F20DA /* UserActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C14BFC1DCCB45F009F20DA /* UserActivity.storyboard */; };
+		63C14C031DCCB45F009F20DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C14C011DCCB45F009F20DA /* LaunchScreen.storyboard */; };
+		63C14C0C1DCCC8B4009F20DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C14C0B1DCCC8B4009F20DA /* AppDelegate.swift */; };
+		63C14C161DCCC8CF009F20DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C14C141DCCC8CF009F20DA /* Assets.xcassets */; };
+		AC11256A01919693CA4DDF5B /* Pods_QuandooTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FA136DB68E563F5A82E9FC /* Pods_QuandooTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		630C0A141DCF5045009A4887 /* ApiRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequestManager.swift; sourceTree = "<group>"; };
+		630C0A161DCF50F9009A4887 /* ApiCommonResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiCommonResult.swift; sourceTree = "<group>"; };
+		630C0A181DCF523C009A4887 /* ApiOperatorLinker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiOperatorLinker.swift; sourceTree = "<group>"; };
+		630C0A1B1DCF54AB009A4887 /* ApiConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		630C0A1D1DCF577F009A4887 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		630C0A201DCF58C3009A4887 /* UtilityMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityMethods.swift; sourceTree = "<group>"; };
+		630C0A221DCF5AF0009A4887 /* PostRequestOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRequestOperator.swift; sourceTree = "<group>"; };
+		630C0A241DCF5B04009A4887 /* GetRequestOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRequestOperator.swift; sourceTree = "<group>"; };
+		630C0A281DCF5B32009A4887 /* ActivityIndicatorOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorOperator.swift; sourceTree = "<group>"; };
+		630C0A2D1DD1DB50009A4887 /* UserListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewController.swift; sourceTree = "<group>"; };
+		630C0A2F1DD1DB9E009A4887 /* UserListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
+		630C0A341DD1DFB3009A4887 /* UserPostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPostListViewController.swift; sourceTree = "<group>"; };
+		630C0A361DD1DFD9009A4887 /* UserPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
+		630C0A391DD1E292009A4887 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		630C0A3C1DD1EBB0009A4887 /* UserPostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPostModel.swift; sourceTree = "<group>"; };
+		630C0A3F1DD2327A009A4887 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		63C14BF31DCCB45F009F20DA /* QuandooTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuandooTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C14BFD1DCCB45F009F20DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserActivity.storyboard; sourceTree = "<group>"; };
+		63C14C021DCCB45F009F20DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63C14C041DCCB45F009F20DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C14C0B1DCCC8B4009F20DA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63C14C141DCCC8CF009F20DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DA7D4173C81D7E31177CE01 /* Pods-QuandooTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuandooTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuandooTest/Pods-QuandooTest.debug.xcconfig"; sourceTree = "<group>"; };
+		6FA9666698CFDA6DDA307CFE /* Pods-QuandooTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuandooTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuandooTest/Pods-QuandooTest.release.xcconfig"; sourceTree = "<group>"; };
+		C3FA136DB68E563F5A82E9FC /* Pods_QuandooTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuandooTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63C14BF01DCCB45F009F20DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC11256A01919693CA4DDF5B /* Pods_QuandooTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5359A67E40AFBB93DC7FACBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3FA136DB68E563F5A82E9FC /* Pods_QuandooTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		630C0A1A1DCF5486009A4887 /* ApiConstants */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A1B1DCF54AB009A4887 /* ApiConstants.swift */,
+			);
+			path = ApiConstants;
+			sourceTree = "<group>";
+		};
+		630C0A1F1DCF5880009A4887 /* UtilityMethods */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A201DCF58C3009A4887 /* UtilityMethods.swift */,
+			);
+			path = UtilityMethods;
+			sourceTree = "<group>";
+		};
+		630C0A2A1DD1DAE3009A4887 /* MasterTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A2B1DD1DAE3009A4887 /* UserListTableViewCell */,
+				630C0A2C1DD1DAE3009A4887 /* UserListTableViewController */,
+			);
+			path = MasterTableViewController;
+			sourceTree = "<group>";
+		};
+		630C0A2B1DD1DAE3009A4887 /* UserListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A2F1DD1DB9E009A4887 /* UserListTableViewCell.swift */,
+			);
+			name = UserListTableViewCell;
+			path = MasterTableViewCell;
+			sourceTree = "<group>";
+		};
+		630C0A2C1DD1DAE3009A4887 /* UserListTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A2D1DD1DB50009A4887 /* UserListTableViewController.swift */,
+			);
+			name = UserListTableViewController;
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		630C0A311DD1DE6B009A4887 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A321DD1DE6B009A4887 /* UserPostCell */,
+				630C0A331DD1DE6B009A4887 /* UserPostListViewController */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		630C0A321DD1DE6B009A4887 /* UserPostCell */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A361DD1DFD9009A4887 /* UserPostCell.swift */,
+			);
+			path = UserPostCell;
+			sourceTree = "<group>";
+		};
+		630C0A331DD1DE6B009A4887 /* UserPostListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A341DD1DFB3009A4887 /* UserPostListViewController.swift */,
+			);
+			path = UserPostListViewController;
+			sourceTree = "<group>";
+		};
+		630C0A381DD1E251009A4887 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A391DD1E292009A4887 /* UserModel.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		630C0A3B1DD1EB9C009A4887 /* UserPostModel */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A3C1DD1EBB0009A4887 /* UserPostModel.swift */,
+			);
+			path = UserPostModel;
+			sourceTree = "<group>";
+		};
+		630C0A3E1DD23261009A4887 /* UserInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A3F1DD2327A009A4887 /* UserInfoViewController.swift */,
+			);
+			path = UserInfoViewController;
+			sourceTree = "<group>";
+		};
+		63C14BEA1DCCB45F009F20DA = {
+			isa = PBXGroup;
+			children = (
+				63C14BF51DCCB45F009F20DA /* QuandooTest */,
+				63C14BF41DCCB45F009F20DA /* Products */,
+				994FFC8E2CAEEA25FF1F9049 /* Pods */,
+				5359A67E40AFBB93DC7FACBD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		63C14BF41DCCB45F009F20DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63C14BF31DCCB45F009F20DA /* QuandooTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63C14BF51DCCB45F009F20DA /* QuandooTest */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C0A1DCCC8B4009F20DA /* AppDelegate */,
+				63C14C0D1DCCC8C7009F20DA /* Scenes */,
+				63C14C171DCCC8DA009F20DA /* StoryBoards */,
+				630C0A1F1DCF5880009A4887 /* UtilityMethods */,
+				63C14C1B1DCDEDC9009F20DA /* WebApiManagement */,
+				63C14C101DCCC8CF009F20DA /* Resources */,
+				63C14C1A1DCCC93E009F20DA /* ProjectSettings */,
+			);
+			path = QuandooTest;
+			sourceTree = "<group>";
+		};
+		63C14C0A1DCCC8B4009F20DA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C0B1DCCC8B4009F20DA /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		63C14C0D1DCCC8C7009F20DA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C0E1DCCC8C7009F20DA /* UsersActivityScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		63C14C0E1DCCC8C7009F20DA /* UsersActivityScene */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C0F1DCCC8C7009F20DA /* ViewControllers */,
+			);
+			path = UsersActivityScene;
+			sourceTree = "<group>";
+		};
+		63C14C0F1DCCC8C7009F20DA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A2A1DD1DAE3009A4887 /* MasterTableViewController */,
+				630C0A311DD1DE6B009A4887 /* DetailViewController */,
+				630C0A3E1DD23261009A4887 /* UserInfoViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		63C14C101DCCC8CF009F20DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C131DCCC8CF009F20DA /* Images */,
+				63C14C111DCCC8CF009F20DA /* Audio */,
+				63C14C121DCCC8CF009F20DA /* Fonts */,
+				63C14C151DCCC8CF009F20DA /* Texts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63C14C111DCCC8CF009F20DA /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		63C14C121DCCC8CF009F20DA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		63C14C131DCCC8CF009F20DA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C141DCCC8CF009F20DA /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		63C14C151DCCC8CF009F20DA /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		63C14C171DCCC8DA009F20DA /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C181DCCC8F8009F20DA /* LaunchScene */,
+				63C14C191DCCC92E009F20DA /* UsersActivityScene */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		63C14C181DCCC8F8009F20DA /* LaunchScene */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C011DCCB45F009F20DA /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScene;
+			sourceTree = "<group>";
+		};
+		63C14C191DCCC92E009F20DA /* UsersActivityScene */ = {
+			isa = PBXGroup;
+			children = (
+				63C14BFC1DCCB45F009F20DA /* UserActivity.storyboard */,
+			);
+			name = UsersActivityScene;
+			sourceTree = "<group>";
+		};
+		63C14C1A1DCCC93E009F20DA /* ProjectSettings */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C041DCCB45F009F20DA /* Info.plist */,
+			);
+			name = ProjectSettings;
+			sourceTree = "<group>";
+		};
+		63C14C1B1DCDEDC9009F20DA /* WebApiManagement */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A1A1DCF5486009A4887 /* ApiConstants */,
+				63C14C271DCDEDC9009F20DA /* ApiRequestManager */,
+				63C14C1C1DCDEDC9009F20DA /* ApiRequestHandling */,
+				63C14C281DCDEDC9009F20DA /* ApiResponseHandling */,
+			);
+			name = WebApiManagement;
+			path = WebServiceManagement;
+			sourceTree = "<group>";
+		};
+		63C14C1C1DCDEDC9009F20DA /* ApiRequestHandling */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C1D1DCDEDC9009F20DA /* ApiOperatorLinker */,
+				63C14C1E1DCDEDC9009F20DA /* ApiOperators */,
+				63C14C251DCDEDC9009F20DA /* EmbeddedActivityIndicator */,
+			);
+			path = ApiRequestHandling;
+			sourceTree = "<group>";
+		};
+		63C14C1D1DCDEDC9009F20DA /* ApiOperatorLinker */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A181DCF523C009A4887 /* ApiOperatorLinker.swift */,
+			);
+			path = ApiOperatorLinker;
+			sourceTree = "<group>";
+		};
+		63C14C1E1DCDEDC9009F20DA /* ApiOperators */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C231DCDEDC9009F20DA /* PostRequestOperator */,
+				63C14C211DCDEDC9009F20DA /* GetRequestOperator */,
+				63C14C1F1DCDEDC9009F20DA /* ActivityIndicatorOperator */,
+			);
+			path = ApiOperators;
+			sourceTree = "<group>";
+		};
+		63C14C1F1DCDEDC9009F20DA /* ActivityIndicatorOperator */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C201DCDEDC9009F20DA /* Operator... */,
+			);
+			path = ActivityIndicatorOperator;
+			sourceTree = "<group>";
+		};
+		63C14C201DCDEDC9009F20DA /* Operator... */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A281DCF5B32009A4887 /* ActivityIndicatorOperator.swift */,
+			);
+			path = Operator...;
+			sourceTree = "<group>";
+		};
+		63C14C211DCDEDC9009F20DA /* GetRequestOperator */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C221DCDEDC9009F20DA /* Operator<* */,
+			);
+			path = GetRequestOperator;
+			sourceTree = "<group>";
+		};
+		63C14C221DCDEDC9009F20DA /* Operator<* */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A241DCF5B04009A4887 /* GetRequestOperator.swift */,
+			);
+			path = "Operator<*";
+			sourceTree = "<group>";
+		};
+		63C14C231DCDEDC9009F20DA /* PostRequestOperator */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C241DCDEDC9009F20DA /* Operator*> */,
+			);
+			path = PostRequestOperator;
+			sourceTree = "<group>";
+		};
+		63C14C241DCDEDC9009F20DA /* Operator*> */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A221DCF5AF0009A4887 /* PostRequestOperator.swift */,
+			);
+			path = "Operator*>";
+			sourceTree = "<group>";
+		};
+		63C14C251DCDEDC9009F20DA /* EmbeddedActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C261DCDEDC9009F20DA /* ActivityIndicatorView */,
+			);
+			path = EmbeddedActivityIndicator;
+			sourceTree = "<group>";
+		};
+		63C14C261DCDEDC9009F20DA /* ActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A1D1DCF577F009A4887 /* ActivityIndicatorView.swift */,
+			);
+			path = ActivityIndicatorView;
+			sourceTree = "<group>";
+		};
+		63C14C271DCDEDC9009F20DA /* ApiRequestManager */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A141DCF5045009A4887 /* ApiRequestManager.swift */,
+			);
+			path = ApiRequestManager;
+			sourceTree = "<group>";
+		};
+		63C14C281DCDEDC9009F20DA /* ApiResponseHandling */ = {
+			isa = PBXGroup;
+			children = (
+				63C14C2A1DCDEDC9009F20DA /* ModelClasses */,
+				63C14C291DCDEDC9009F20DA /* ApiCommonResult */,
+			);
+			path = ApiResponseHandling;
+			sourceTree = "<group>";
+		};
+		63C14C291DCDEDC9009F20DA /* ApiCommonResult */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A161DCF50F9009A4887 /* ApiCommonResult.swift */,
+			);
+			path = ApiCommonResult;
+			sourceTree = "<group>";
+		};
+		63C14C2A1DCDEDC9009F20DA /* ModelClasses */ = {
+			isa = PBXGroup;
+			children = (
+				630C0A381DD1E251009A4887 /* UserModel */,
+				630C0A3B1DD1EB9C009A4887 /* UserPostModel */,
+			);
+			path = ModelClasses;
+			sourceTree = "<group>";
+		};
+		994FFC8E2CAEEA25FF1F9049 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DA7D4173C81D7E31177CE01 /* Pods-QuandooTest.debug.xcconfig */,
+				6FA9666698CFDA6DDA307CFE /* Pods-QuandooTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63C14BF21DCCB45F009F20DA /* QuandooTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63C14C071DCCB45F009F20DA /* Build configuration list for PBXNativeTarget "QuandooTest" */;
+			buildPhases = (
+				D759A6A16BFEB18E39373942 /* [CP] Check Pods Manifest.lock */,
+				63C14BEF1DCCB45F009F20DA /* Sources */,
+				63C14BF01DCCB45F009F20DA /* Frameworks */,
+				63C14BF11DCCB45F009F20DA /* Resources */,
+				D7C5ADD4FB843902F39039A5 /* [CP] Embed Pods Frameworks */,
+				952E7DE87D462F737C96A246 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuandooTest;
+			productName = QuandooTest;
+			productReference = 63C14BF31DCCB45F009F20DA /* QuandooTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63C14BEB1DCCB45F009F20DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Midhun P Mathew";
+				TargetAttributes = {
+					63C14BF21DCCB45F009F20DA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = WECD7VU928;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 63C14BEE1DCCB45F009F20DA /* Build configuration list for PBXProject "QuandooTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63C14BEA1DCCB45F009F20DA;
+			productRefGroup = 63C14BF41DCCB45F009F20DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63C14BF21DCCB45F009F20DA /* QuandooTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63C14BF11DCCB45F009F20DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63C14C031DCCB45F009F20DA /* LaunchScreen.storyboard in Resources */,
+				63C14C161DCCC8CF009F20DA /* Assets.xcassets in Resources */,
+				63C14BFE1DCCB45F009F20DA /* UserActivity.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		952E7DE87D462F737C96A246 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuandooTest/Pods-QuandooTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D759A6A16BFEB18E39373942 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C5ADD4FB843902F39039A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuandooTest/Pods-QuandooTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63C14BEF1DCCB45F009F20DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630C0A151DCF5045009A4887 /* ApiRequestManager.swift in Sources */,
+				630C0A191DCF523C009A4887 /* ApiOperatorLinker.swift in Sources */,
+				630C0A371DD1DFD9009A4887 /* UserPostCell.swift in Sources */,
+				630C0A351DD1DFB3009A4887 /* UserPostListViewController.swift in Sources */,
+				630C0A3D1DD1EBB0009A4887 /* UserPostModel.swift in Sources */,
+				630C0A291DCF5B32009A4887 /* ActivityIndicatorOperator.swift in Sources */,
+				630C0A1C1DCF54AB009A4887 /* ApiConstants.swift in Sources */,
+				630C0A301DD1DB9E009A4887 /* UserListTableViewCell.swift in Sources */,
+				630C0A2E1DD1DB50009A4887 /* UserListTableViewController.swift in Sources */,
+				630C0A401DD2327A009A4887 /* UserInfoViewController.swift in Sources */,
+				630C0A1E1DCF577F009A4887 /* ActivityIndicatorView.swift in Sources */,
+				630C0A171DCF50F9009A4887 /* ApiCommonResult.swift in Sources */,
+				63C14C0C1DCCC8B4009F20DA /* AppDelegate.swift in Sources */,
+				630C0A211DCF58C3009A4887 /* UtilityMethods.swift in Sources */,
+				630C0A231DCF5AF0009A4887 /* PostRequestOperator.swift in Sources */,
+				630C0A3A1DD1E292009A4887 /* UserModel.swift in Sources */,
+				630C0A251DCF5B04009A4887 /* GetRequestOperator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63C14BFC1DCCB45F009F20DA /* UserActivity.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63C14BFD1DCCB45F009F20DA /* Base */,
+			);
+			name = UserActivity.storyboard;
+			sourceTree = "<group>";
+		};
+		63C14C011DCCB45F009F20DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63C14C021DCCB45F009F20DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63C14C051DCCB45F009F20DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63C14C061DCCB45F009F20DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63C14C081DCCB45F009F20DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DA7D4173C81D7E31177CE01 /* Pods-QuandooTest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WECD7VU928;
+				INFOPLIST_FILE = QuandooTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.midhun.QuandooTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		63C14C091DCCB45F009F20DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FA9666698CFDA6DDA307CFE /* Pods-QuandooTest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WECD7VU928;
+				INFOPLIST_FILE = QuandooTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.midhun.QuandooTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63C14BEE1DCCB45F009F20DA /* Build configuration list for PBXProject "QuandooTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C14C051DCCB45F009F20DA /* Debug */,
+				63C14C061DCCB45F009F20DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63C14C071DCCB45F009F20DA /* Build configuration list for PBXNativeTarget "QuandooTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C14C081DCCB45F009F20DA /* Debug */,
+				63C14C091DCCB45F009F20DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63C14BEB1DCCB45F009F20DA /* Project object */;
+}
