@@ -24,6 +24,7 @@ class UserInfoViewController: UITableViewController {
     @IBOutlet weak var industryLabel: UILabel!
     @IBOutlet weak var serviceLabel: UILabel!
     var userInfo:UserModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "User Details"

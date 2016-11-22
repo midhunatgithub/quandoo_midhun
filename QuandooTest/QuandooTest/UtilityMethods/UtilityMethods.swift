@@ -25,3 +25,10 @@ func dispatchBackgroundQueue(closure: @escaping () -> Void) {
     }
     
 }
+
+func showAlert(titel:String,messege:String){
+    let alertController = UIAlertController(title: titel, message: messege, preferredStyle: .alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alertController.addAction(defaultAction)
+    currentRootViewController().present(alertController, animated: true, completion: nil)
+}

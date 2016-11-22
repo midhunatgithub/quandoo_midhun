@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import JSONJoy
-class UserPostListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UserPostListViewController: UIViewController {
     var userId:Int?
     var userDisplayName = ""
     var posts = [UserPostModel]()
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var postListTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Posts"
@@ -36,29 +36,21 @@ class UserPostListViewController: UIViewController, UITableViewDataSource, UITab
             return
         }
         let userIdString = "\(id)"
-        let result = ApiRequestManager.apiRequest.fetchUserPostsWithUserId(userId: userIdString)
-        result.onSuccess { (response) in
-            do {
-                let postList =  try UserPostList(JSONDecoder(response))
-                self.posts = postList.posts
-                dispatchOnMainQueue {
-                    self.postListTableView.reloadData()
-                }
-            } catch JSONError.wrongType {
-                self.showAlert(titel: "Error!", messege: "Unexpected content during the parsing.")
-            }catch {
-                self.showAlert(titel: "Error!", messege: "Unexpected error during the parsing.")
+        func reloadTableViewOnMainQueue(){
+            dispatchOnMainQueue {
+                self.postListTableView.reloadData()
             }
-            }.onFailure { (error) in
-                self.showAlert(titel: "Error!", messege: error.localizedDescription)
         }
+        // calling webservice.
+        ApiRequestManager.apiRequest.fetchUserPostsWithUserId(userId: userIdString) { (isSucess, posts) in
+             self.posts = posts
+             reloadTableViewOnMainQueue()
+        }
+
     }
-    func showAlert(titel:String,messege:String){
-        let alertController = UIAlertController(title: titel, message: messege, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        present(alertController, animated: true, completion: nil)
-    }
+    
+}
+extension UserPostListViewController :  UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int{
         var numOfSections: Int = 0
         if posts.count > 0{
@@ -88,5 +80,5 @@ class UserPostListViewController: UIViewController, UITableViewDataSource, UITab
         cell.messegeLabel.text = post.body
         return cell
     }
-    
+
 }

@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import JSONJoy
-class UserListTableViewController: UITableViewController, UISplitViewControllerDelegate, UserListTableViewCellDelegate {
+
+class UserListTableViewController: UITableViewController {
+    
     var users = [UserModel]()
     var selectedUser:UserModel?
     var anchorRect:CGRect?
@@ -40,34 +41,14 @@ class UserListTableViewController: UITableViewController, UISplitViewControllerD
             }
         }
         // calling web service.
-        let result = ApiRequestManager.apiRequest.fetchUsers()
-        result.onSuccess { (response) in
-            do {
-                let userList =  try UserList(JSONDecoder(response))
-                self.users = userList.users
-                reloadTableView()
-            } catch JSONError.wrongType {
-                reloadTableView()
-                self.showAlert(titel: "Error!", messege: "Unexpected content during the parsing.")
-            }catch {
-                self.showAlert(titel: "Error!", messege: "Unexpected error during the parsing.")
-                reloadTableView()
-            }
-            }.onFailure { (error) in
-                self.showAlert(titel: "Error!", messege: error.localizedDescription)
-                reloadTableView()
-                
+         ApiRequestManager.apiRequest.fetchUsers { (isSucess, users) in
+            self.users = users
+            reloadTableView()
         }
     }
+    // pull to refresh action method.
     func refresh() {
         populateUIWithUsers()
-    }
-    
-    func showAlert(titel:String,messege:String){
-        let alertController = UIAlertController(title: titel, message: messege, preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(defaultAction)
-        present(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,13 +56,27 @@ class UserListTableViewController: UITableViewController, UISplitViewControllerD
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - UISplitViewController Delegate Methods
-    
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        return true;
+    // MARK: - Navigation
+    @IBAction func unwinFromUserInfoPopUp(segue:UIStoryboardSegue)  {
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let idetifier = segue.identifier
+        let navController = segue.destination as! UINavigationController
+        if idetifier == "show_userInfoPopUp" {
+            navController.popoverPresentationController?.sourceRect = anchorRect!
+            let userInfoView =  navController.topViewController as! UserInfoViewController
+            userInfoView.userInfo = selectedUser
+        }else if idetifier == "show_userPosts" {
+            let userPostListView = navController.topViewController as! UserPostListViewController
+            userPostListView.userId = selectedUser?.id
+            userPostListView.userDisplayName = (selectedUser?.name) ?? ""
+        }
     }
     
-    // MARK: - Table view data source
+}
+// MARK: - Tableview Methods
+extension UserListTableViewController {
     
     override  func numberOfSections(in tableView: UITableView) -> Int{
         var numOfSections: Int = 0
@@ -130,8 +125,17 @@ class UserListTableViewController: UITableViewController, UISplitViewControllerD
         self.performSegue(withIdentifier: "show_userPosts", sender: self)
     }
     
-    // MARK: - UserListTableViewCellDelegate
-    
+
+}
+
+// MARK: - UISplitViewController Delegate Methods
+extension UserListTableViewController : UISplitViewControllerDelegate {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true;
+    }
+}
+// MARK: - UserListTableViewCell Delegate method
+extension UserListTableViewController : UserListTableViewCellDelegate {
     func userListCell(cell: UserListTableViewCell, initiatedAction action: CellActions, atTheIndexPath indexPath: IndexPath) {
         selectedUser = users[indexPath.row]
         switch action {
@@ -143,24 +147,4 @@ class UserListTableViewController: UITableViewController, UISplitViewControllerD
             
         }
     }
-    
-    // MARK: - Navigation
-    
-    @IBAction func unwinFromUserInfoPopUp(segue:UIStoryboardSegue)  {
-        
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let idetifier = segue.identifier
-        let navController = segue.destination as! UINavigationController
-        if idetifier == "show_userInfoPopUp" {
-            navController.popoverPresentationController?.sourceRect = anchorRect!
-            let userInfoView =  navController.topViewController as! UserInfoViewController
-            userInfoView.userInfo = selectedUser
-        }else if idetifier == "show_userPosts" {
-            let userPostListView = navController.topViewController as! UserPostListViewController
-            userPostListView.userId = selectedUser?.id
-            userPostListView.userDisplayName = (selectedUser?.name) ?? ""
-        }
-    }
-    
 }
