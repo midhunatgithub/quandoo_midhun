@@ -1,4 +1,4 @@
-# quandoo_midhun
+# quandoo
 
 Task:
 Create an iOS client Application for the https://jsonplaceholder.typicode.com/ sample REST API. Requirements:
